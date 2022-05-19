@@ -5,8 +5,8 @@ A ruby/sinatra JSON api to access stored recipes
 ## GET route that returns all recipe names.
 
 ```bash
-A GET request to **http://localhost:3000/recipes** returns:
-**Response body (JSON):**
+A GET request to *http://localhost:3000/recipes* returns:
+*Response body (JSON):*
 {
 	"recipeNames":
 		[
@@ -15,15 +15,15 @@ A GET request to **http://localhost:3000/recipes** returns:
 			"chai"
 		]
 }
-**Status: 200**
+*Status: 200*
 ```
 
 ## GET route that takes a recipe name as a **string** param. Return the ingredients and the number of steps in the recipe as JSON
 
 ```bash
 A GET request to http://localhost:3000/recipes/details/garlicPasta returns:
-**If recipe exists:** 
-**Response body (JSON):**
+*If recipe exists:*
+*Response body (JSON):*
 {
 	"details":
 		{
@@ -37,11 +37,11 @@ A GET request to http://localhost:3000/recipes/details/garlicPasta returns:
 			"numSteps":5
 		}
 }
-**Status: 200
+*Status: 200
 ---
 If recipe does NOT exist: 
-Response body (JSON)**: {}
-**Status**: 200
+Response body (JSON)*: {}
+*Status*: 200
 ```
 
 ## POST route that can add additional recipes in the existing format to the backend with support for the above routes.
@@ -60,8 +60,8 @@ A POST request to **http://localhost:3000/recipes** with body
 	] 
 } 
 returns:
-**Response body: None**
-**Status:** 201
+*Response body: None*
+*Status:* 201
 ```
 
 Error Response:
@@ -69,11 +69,11 @@ Error Response:
 If the recipe already exists:
 
 ```json
-**Response body (JSON):**
+*Response body (JSON):*
 {
 	"error": "Recipe already exists"
 }
-**Status: 400**
+*Status: 400*
 ```
 
 ## PUT route that can update existing recipes.
@@ -91,8 +91,8 @@ A PUT request to **http://localhost:3000/recipes** with body
 		"spread butter on bagel"
 	] 
 } returns:
-**Response body: None**
-**Status:** 204
+*Response body: None*
+*Status:* 204
 ```
 
 Error Response:
@@ -100,9 +100,9 @@ Error Response:
 If the recipe doesn't exist:
 
 ```json
-**Response body (JSON):**
+*Response body (JSON):*
 {
 	"error": "Recipe does not exist"
 }
-**Status: 404**
+*Status: 404*
 ```
